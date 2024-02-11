@@ -1,0 +1,239 @@
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: pink;
+}
+
+.container {
+    position: relative;
+}
+.containers {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    color: #333;
+    background: pink;
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    color: #ff6699;
+    text-shadow: 1px 1px #ffffff;
+    }
+
+.containers .yes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.containers .yes br {
+    margin-bottom: 20px; /* Add space between lines if desired */
+}
+
+.containers .yes p {
+    font-size: 24px; /* Larger font size */
+    margin: 10px 0; /* Space around the text */
+    color: #FF66CC;
+}
+
+.containers .yes img {
+    max-width: 100%;
+    height: auto;
+}
+@keyframes fadeInText {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .text-content {
+    animation: fadeInText 2s ease-out;
+  }
+  
+.button, button {
+    margin: 10px 5px;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #f4978e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.button:hover, button:hover {
+    transform: scale(1.1);
+}
+
+.valentines {
+    position: relative;
+    top: 50px;
+    cursor: pointer;
+    animation: up 3s linear infinite;
+}
+
+.envelope {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: #f08080;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.envelope::before {
+    content: '';
+    position: absolute;
+    width: 212px;
+    height: 212px;
+    background: #f08080;
+    transform: rotate(45deg);
+    top: -105px;
+    left: 44px;
+    border-radius: 30px 0 0 0;
+}
+.button {
+    margin: 10px 5px; 
+    font-size: 16px; 
+    padding: 10px 20px; 
+    background-color: #f4978e; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+
+.button:hover {
+    transform: scale(1.1); 
+}
+.front {
+    position: absolute;
+    border-right: 180px solid red;
+    border-top: 95px solid transparent;
+    border-bottom: 100px solid transparent;
+    left: 120px;
+    top: 5px;
+    width: 0;
+    height: 0;
+    z-index: 10;
+}
+
+.front::before {
+    position: absolute;
+    content: '';
+    border-left: 300px solid red;
+    border-top: 195px solid transparent;
+    left: -120px;
+    top: -95px;
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 180px;
+    background: #fff;
+    border-radius: 2px;
+    display: grid;
+    place-items: center;
+    transition: 1s;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 2px solid #003049;
+    border-style: dashed;
+}
+
+.valentines:hover .card {
+    transform: translateY(-100px);
+}
+
+.card .text {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 28px;
+    text-align: center;
+    line-height: 25px;
+    color: #003049;
+}
+
+.card .heart {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background: red;
+    bottom: 20px;
+    transform: rotate(45deg);
+    border-radius: 50% 0 0 50%;
+}
+
+.card .heart::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+    border-radius: 0 50% 50% 0;
+    right: 0;
+    transform: rotate(-90deg);
+    transform-origin: top;
+}
+
+.card .heart::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+    right: -18px;
+}
+
+.valentines::before {
+    content: '';
+    position: absolute;
+    width: 330px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .3);
+    top: 265px;
+    left: -15px;
+    animation: scale 3s linear infinite;
+}
+
+@keyframes up {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(.85);
+    }
+}
+
+button:first-of-type { /* Targeting the first button, which is "Yes" */
+
+    font-size: 20px; /* Starting off big */
+    padding: 15px 30px; /* Larger initial padding */
+}
